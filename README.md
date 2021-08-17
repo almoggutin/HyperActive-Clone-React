@@ -71,7 +71,7 @@ This command runs in order to create a docker image from the root of the applica
 
 This command runs in order to start the container on port 3000.
 
-### `dcker stop hyperactive-clone-dev-container`
+### `docker stop hyperactive-clone-dev-container`
 
 This command runs in order to stop the container from running.
 
