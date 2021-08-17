@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Banner from '../components/banner/Banner.component';
-import ContactBar from '../components/main-components/contact-bar/ContactBar.component';
 import WhatsappButton from '../components/main-components/whatsapp-button/WhatsappButton.component';
 import AboutUsSection from '../components/sections/about-us-section/AboutUsSection.component';
 import FirmsSection from '../components/sections/firms-section/FirmsSections.component';
@@ -23,7 +22,6 @@ const Homepage = () => {
             <ProgramQuestionsSection />
             <GeneralQuestionsSection />
             <WhatsappButton />
-            <ContactBar />
         </div>
     );
 };

@@ -7,6 +7,7 @@ import Header from './components/main-components/header/Header.component';
 import Footer from './components/main-components/footer/Footer.component';
 import ContactModal from './components/modals/contact-modal/ContactModal.component';
 import FormModal from './components/modals/form-modal/FormModal.component';
+import ContactBar from './components/main-components/contact-bar/ContactBar.component';
 
 const App = () => {
     const [mobileSize, setMobileSize] = useState(false);
@@ -36,6 +37,7 @@ const App = () => {
             <FormModal />
 
             <Footer />
+            <ContactBar />
         </FormModalClassContextProvider>
     );
 };
