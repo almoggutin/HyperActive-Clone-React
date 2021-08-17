@@ -1,0 +1,39 @@
+.custom-input {
+    display: flex;
+    align-items: center;
+
+    width: 15.625rem;
+    height: 3.75rem;
+    margin: 0.75rem;
+
+    background-color: $white;
+
+    label {
+        width: 25%;
+        padding-right: 5px;
+        margin-left: 10px;
+
+        color: black;
+        font-size: 0.9rem;
+        font-weight: 700;
+    }
+
+    .divider {
+        width: 3px;
+        height: 1.3rem;
+
+        border-radius: 1.25rem;
+        background-color: $darkBlue;
+    }
+
+    input {
+        width: 70%;
+        height: 100%;
+        border: none;
+        outline: none;
+
+        &::placeholder {
+            color: red;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+node_modules
+./git
+kubernetes
+docker
+License
+READEME.md
+.prettierignore
+.prettierrc
+
+client/node_modules
+client/build
+

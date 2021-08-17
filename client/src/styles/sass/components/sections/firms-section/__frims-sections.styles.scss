@@ -1,0 +1,31 @@
+.firms-section {
+    width: 100vw;
+    padding: 65px 10px 10px;
+
+    background-color: $white;
+    box-shadow: 50px 50px 50px #c2b9b0;
+
+    .title {
+        margin: 10px auto;
+
+        text-align: center;
+    }
+
+    .firms-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+
+        width: 100%;
+        min-height: 54rem;
+
+        img {
+            max-height: 100px;
+            max-width: 100px;
+            margin: 22px;
+            flex-shrink: 0;
+            object-fit: fill;
+        }
+    }
+}

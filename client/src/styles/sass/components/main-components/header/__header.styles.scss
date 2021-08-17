@@ -1,0 +1,50 @@
+@import './navbar/_navbar.styles';
+@import './toggle-button/toggle-button.styles.scss';
+
+.header {
+    @extend %flex-center;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+    width: 100vw;
+
+    background-color: $white;
+
+    @media (max-width: 58rem) {
+        align-items: flex-start;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .logo-container {
+        width: 9.5rem;
+        height: 4.5rem;
+
+        cursor: pointer;
+
+        @media (max-width: 58rem) {
+            width: 8.5rem;
+            height: 3.3rem;
+        }
+
+        img {
+            width: inherit;
+            height: inherit;
+        }
+
+        span {
+            position: relative;
+            right: 15px;
+            top: -36px;
+
+            color: $brown;
+            font-weight: 700;
+            font-size: 0.6rem;
+
+            @media (max-width: 58rem) {
+                top: -30px;
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1rem;
+    font-family: 'Assistant', sans-serif;
+    margin: 0%;
+    direction: rtl;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

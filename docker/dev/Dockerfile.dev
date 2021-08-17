@@ -1,0 +1,19 @@
+FROM node 
+
+WORKDIR /app
+
+COPY client/package.json /app
+
+RUN npm i
+
+COPY client/. /app
+
+ENV PORT=3000
+
+EXPOSE ${PORT}
+
+CMD ["npm", "start"]
+
+# Command for building an image from the root project: docker build . -t hyperactive-clone-dev-image -f docker/dev/Dockerfile.dev 
+# Command for starting a container: docker run -p 3000:3000 -it -v "$(pwd)/src:/app/src" --name hyperactive-clone-dev-container hyperactive-clone-dev-image
+# Command for stoping the container: docker stop hyperactive-clone-dev-container

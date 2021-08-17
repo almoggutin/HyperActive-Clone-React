@@ -1,0 +1,95 @@
+.why-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    min-height: 52.75rem;
+
+    box-shadow: 10px 50px 100px #000;
+
+    .title {
+        font-size: 2.9rem;
+        margin: 40px 0 10px;
+    }
+
+    .section-content {
+        width: 100%;
+        min-height: 44.625rem;
+        padding: 15px 10px 10px;
+
+        .description {
+            max-width: 70.625rem;
+            min-height: 6.5rem;
+            margin: 0 auto;
+
+            font-size: 1.1rem;
+
+            & > p {
+                &:nth-child(2) {
+                    font-weight: 700;
+                }
+
+                &:last-child {
+                    color: blue;
+                }
+            }
+        }
+
+        .differences {
+            display: flex;
+            justify-content: center;
+
+            width: 100%;
+            margin-top: 1rem;
+
+            @media (max-width: 58rem) {
+                flex-direction: column;
+            }
+
+            .differences-container {
+                width: 50%;
+                max-width: 34.375rem;
+                padding: 10px;
+                margin: 10px;
+
+                transition: all 0.5s linear;
+                font-size: 1.1rem;
+
+                @media (max-width: 58rem) {
+                    width: 100%;
+                    max-width: none;
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                    box-shadow: 10px 10px 50px #000;
+
+                    @media (max-width: 58rem) {
+                        transform: none;
+                        box-shadow: none;
+                    }
+                }
+
+                .paragraph-link {
+                    color: white;
+                    text-decoration: underline;
+                    font-weight: 600;
+                }
+
+                ol {
+                    padding-right: 1.25rem;
+                }
+            }
+
+            .competitors {
+                background-color: black;
+                color: white;
+            }
+
+            .our-company {
+                background-color: $lightGreen;
+                align-self: stretch;
+            }
+        }
+    }
+}

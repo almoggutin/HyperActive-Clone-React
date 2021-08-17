@@ -1,0 +1,103 @@
+.contact-modal {
+    @extend %flex-center;
+    flex-direction: column;
+
+    min-width: 38.125rem;
+    width: 38.125rem;
+    height: 38.125rem;
+
+    border-radius: 50%;
+
+    & > svg {
+        width: 30px !important;
+        height: 30px;
+
+        cursor: pointer;
+    }
+
+    & > .title {
+        width: 75%;
+        height: 5.25rem;
+        margin: 10px 0;
+
+        color: $darkBlue;
+        font-size: 2rem;
+        font-weight: 800;
+        text-align: center;
+    }
+
+    .contact-modal__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 25rem;
+        height: 23.25rem;
+
+        .form-inputs-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+
+            width: 100%;
+            height: 17.7rem;
+
+            color: $darkBlue;
+
+            & > input {
+                width: 100%;
+                height: 3.9rem;
+                margin: 15px 0;
+                padding-right: 5px;
+
+                border: 0 solid #352f8a;
+                box-shadow: 0 0 4px -1px #213b7f;
+
+                &::placeholder {
+                    color: rgb(88, 88, 88);
+                    font-size: 17px;
+                    font-weight: 600;
+                }
+
+                &.invalid {
+                    &::placeholder {
+                        color: red;
+                        font-size: 17px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        & > .checkbox-container {
+            display: flex;
+
+            width: 19.375rem;
+            margin: 5px 0 10px;
+
+            & > label {
+                margin-right: 2%;
+
+                font-weight: 700;
+                font-size: 13px;
+                color: $darkBlue;
+            }
+
+            & > input[type='checkbox'] {
+                margin-right: 5%;
+            }
+        }
+
+        button[type='submit'] {
+            width: 13.125rem;
+            height: 3.125rem;
+            margin-bottom: 5px;
+
+            color: white;
+            background-color: #154b9c;
+            font-size: 1.3rem;
+            cursor: pointer;
+        }
+    }
+}

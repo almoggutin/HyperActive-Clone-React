@@ -1,0 +1,23 @@
+.custom-button {
+    @extend %flex-center;
+
+    width: 16rem;
+    height: 3.75rem;
+    margin-top: 10px;
+    margin-bottom: 10%;
+    padding: 0%;
+
+    background-color: $sand;
+    cursor: pointer;
+
+    div {
+        @extend %flex-center;
+
+        width: 99%;
+        height: 96%;
+
+        border: 2px solid $teal;
+        font-size: 2.3rem;
+        font-weight: 400;
+    }
+}

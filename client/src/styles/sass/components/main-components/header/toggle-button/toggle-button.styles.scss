@@ -1,0 +1,41 @@
+.toggle-button {
+    // display: none;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+    cursor: pointer;
+
+    // @media (max-width: 58rem) {
+    //     display: block;
+    // }
+
+    .bar {
+        display: block;
+        margin: 0.5rem 0;
+        width: 100%;
+        height: 5px;
+
+        border-radius: 15px;
+        background-color: $darkBlue;
+        transition: all 0.5s ease-in-out;
+    }
+
+    &.open {
+        .bar:first-child {
+            transform: rotate(45deg) translate(9px, 9px);
+        }
+
+        .bar:nth-child(2) {
+            transform: translateX(40px);
+            background-color: transparent;
+        }
+
+        .bar:last-child {
+            transform: rotate(-45deg) translate(9px, -9px);
+        }
+    }
+}

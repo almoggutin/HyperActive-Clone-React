@@ -1,0 +1,19 @@
+@import './course-links/_course-links.styles';
+@import './course-link/_course-link.styles';
+@import './contact-form/_contact-form.styles';
+
+.main-section {
+    @extend %flex-center;
+
+    width: 100vw;
+    height: 41.25rem;
+
+    & > div {
+        display: flex;
+        justify-content: space-evenly;
+
+        width: 100%;
+        max-width: 87.5rem;
+        height: 100%;
+    }
+}

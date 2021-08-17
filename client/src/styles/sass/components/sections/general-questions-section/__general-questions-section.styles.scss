@@ -1,0 +1,92 @@
+.general-questions-section {
+    width: 100vw;
+    min-height: 30rem;
+    padding: 65px 10px 10px;
+
+    .title {
+        margin: 10px auto;
+
+        text-align: center;
+    }
+
+    .general-questions-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+
+        width: 100%;
+        min-height: 22rem;
+        padding-top: 50px;
+
+        @media (max-width: 58rem) {
+            flex-direction: column;
+        }
+
+        .questions-answers-container {
+            width: 30.25rem;
+            height: 100%;
+
+            @media (max-width: 58rem) {
+                width: 100%;
+                flex-direction: column-reverse;
+            }
+
+            .question-answer-container {
+                width: 28.125rem;
+                min-height: 6.32rem;
+                margin: 0 1.1rem;
+                padding: 0 10px;
+
+                border-top: 0.5px solid #dbdbdb;
+                cursor: pointer;
+
+                @media (max-width: 58rem) {
+                    width: 100%;
+                }
+
+                .question {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    height: 5rem;
+                    margin: 10px 0;
+
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                    color: #007cba;
+                }
+
+                .answer {
+                    display: none;
+
+                    &.open {
+                        display: block;
+
+                        animation: revealAnswer 0.5s linear forwards;
+                        margin-bottom: 10px;
+                    }
+
+                    .answer-link {
+                        display: block;
+
+                        text-decoration: underline;
+                        color: blue;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes revealAnswer {
+    from {
+        max-height: 0;
+        opacity: 0;
+    }
+    to {
+        max-height: 800px;
+        opacity: 1;
+    }
+}

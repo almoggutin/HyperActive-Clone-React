@@ -1,0 +1,22 @@
+.about-us-section {
+    width: 100vw;
+    min-height: 41.25rem;
+    padding: 65px 10px 10px;
+
+    .title {
+        margin: 10px auto;
+
+        text-align: center;
+    }
+
+    .about-us-contnet {
+        max-width: 68.75rem;
+        min-height: 31.75rem;
+        margin: auto;
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 17.6px;
+        }
+    }
+}

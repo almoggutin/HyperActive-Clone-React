@@ -1,0 +1,164 @@
+%container {
+    position: relative;
+
+    max-width: 35rem;
+    padding: 45px;
+
+    color: $white;
+
+    @media (max-width: 71.5rem) {
+        max-width: 70rem;
+        margin: 10px 0;
+        padding: 1.25rem;
+    }
+
+    & > .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.3rem;
+
+        & > svg {
+            display: none;
+            width: 15px;
+            height: 15px;
+            margin-left: 0.75rem;
+            cursor: pointer;
+
+            @media (max-width: 71.5rem) {
+                display: block;
+            }
+        }
+    }
+
+    & > .content {
+        display: flex;
+        flex-direction: column;
+
+        height: 30rem;
+        font-size: 1.1rem;
+
+        @media (max-width: 71.5rem) {
+            opacity: 0;
+            max-height: 0;
+            height: 0;
+            transition: all 0.3s linear;
+
+            &.open {
+                opacity: 1;
+                display: flex;
+                height: fit-content;
+                max-height: 900px;
+            }
+        }
+    }
+}
+
+%tringle {
+    position: absolute;
+
+    width: 50px;
+    height: 50px;
+
+    border: 25px solid $white;
+
+    @media (max-width: 71.5rem) {
+        display: none;
+    }
+}
+
+.how-it-works-section {
+    width: 100vw;
+    max-height: 86.5rem;
+
+    padding: 65px 10px 10px;
+
+    @media (max-width: 71.5rem) {
+    }
+
+    & > .title {
+        margin: 0 0 1.25rem;
+
+        text-align: center;
+        font-size: 2.9rem;
+    }
+
+    & > .explanation-container {
+        display: flex;
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        margin: 0 auto;
+
+        @media (max-width: 71.5rem) {
+            flex-direction: column;
+
+            width: 100%;
+            min-height: 23rem;
+        }
+
+        .part-1 {
+            @extend %container;
+
+            background-color: $darkTeal;
+
+            .triangle-left {
+                @extend %tringle;
+
+                right: 550px;
+                top: 35px;
+                z-index: 1;
+
+                border-left-color: transparent;
+                border-right-color: $darkTeal;
+                border-top-color: transparent;
+                border-bottom-color: transparent;
+            }
+        }
+
+        .part-2 {
+            @extend %container;
+
+            background-color: $paleBlue;
+
+            .triangle-down {
+                @extend %tringle;
+                z-index: 1;
+
+                top: 590px;
+                left: 55px;
+
+                border-left-color: transparent;
+                border-right-color: transparent;
+                border-top-color: $paleBlue;
+                border-bottom-color: transparent;
+            }
+        }
+
+        .part-3 {
+            @extend %container;
+
+            background-color: $blue;
+
+            .triangle-right {
+                @extend %tringle;
+
+                left: 550px;
+                top: 20px;
+                z-index: 1;
+
+                border-left-color: $blue;
+                border-right-color: transparent;
+                border-top-color: transparent;
+                border-bottom-color: transparent;
+            }
+        }
+
+        .part-4 {
+            @extend %container;
+
+            background-color: $darkBlue;
+        }
+    }
+}
