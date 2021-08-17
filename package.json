@@ -9,7 +9,7 @@
         "build": "cd client && npm run build",
         "dev": "cd client && npm start && npm sass",
         "start": "node server/index.js",
-        "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+        "heroku-postbuild": "cd client && npm install && cd && npm install --only=dev --no-shrinkwrap && npm run build"
     },
     "keywords": [],
     "author": "",
